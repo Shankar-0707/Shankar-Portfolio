@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: auto; /* Lenis handles smooth scroll; 'auto' prevents double-smoothing */
+}
+
+/* Reduced motion: fall back to native smooth scroll */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: #0a0a0a;
+  max-width: 100%;
+  color: white;
+  overflow-x: hidden;
+}
+
+.glass-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.015)
+  );
+  border: 1px solid rgba(255, 138, 0, 0.18);
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: 0.3s;
+  z-index: 20;
+}
+
+.slider-btn:hover {
+  border-color: #ff8a00;
+  color: #ff8a00;
+}
+
+.slider-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.contact-input {
+  width: 100%;
+  background: rgba(25, 25, 25, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.contact-input::placeholder {
+  color: #7c7c7c;
+}
+
+.contact-input:focus {
+  background: rgba(30,30,30,0.95);
+}
+
+.glass-card:hover {
+  box-shadow: 0 0 25px rgba(255,138,0,0.25);
+}
+
+.social-icon:hover {
+  background: linear-gradient(135deg, #ff8a00, #ffb703);
+  color: black;
+}
+
