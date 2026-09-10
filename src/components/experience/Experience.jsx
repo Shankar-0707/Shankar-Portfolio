@@ -6,7 +6,7 @@ import Reveal from "@/components/ui/Reveal";
 
 const timeline = [
   {
-  year: "Jan 2026 – June 2026",
+  year: "February 2026 – August 2026",
   title: "Full Stack Developer Intern — MyCleaners",
   points: [
     "Built 20+ RESTful APIs for a role-based store management system using Node.js, Express, Prisma, and PostgreSQL",
